@@ -1,18 +1,19 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-reanimated-pie-charts';
+import { StyleSheet, View, Text } from "react-native";
+import { Multiply } from "react-native-reanimated-pie-charts";
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  // const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    // multiply(3, 7).then(setResult);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result: </Text>
+      <Multiply />
     </View>
   );
 }
@@ -20,8 +21,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   box: {
     width: 60,
